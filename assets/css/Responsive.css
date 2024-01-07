@@ -1,0 +1,99 @@
+@media (max-width: 1200px) {
+  :root {
+    --font-h1size: 4.5rem;
+    --font-h2size: 3.2rem;
+    --font-h3size: 2.8;
+    --font-h4size: 2rem;
+    --font-h5size: 1.6rem;
+  }
+
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --font-h1size: 4rem;
+    --font-h2size: 3rem;
+    --font-h3size: 2.6;
+    --font-h4size: 2rem;
+    --font-h5size: 1.6rem;
+  }
+
+  .container {
+    max-width: 768px;
+  }
+
+  .hero_wrapper .content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero_wrapper .content .right_content img {
+    max-width: 80%;
+  }
+
+  .hero_wrapper .content .left_content:nth-child(1) {
+    order: 2;
+  }
+  .hero_wrapper .content .right_content:nth-child(2) {
+    order: 1;
+  }
+  .age_details_wrapper .card_content .age_card {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-h1size: 3.6rem;
+    --font-h2size: 2.8rem;
+    --font-h3size: 2.4;
+  }
+
+  .age_details_wrapper .card_content {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  header .nav_items {
+    position: absolute;
+    left: -300px;
+    top: 86px;
+    width: 300px;
+    background-color: var(--primary-color);
+    height: calc(100vh - 86px);
+    transition: all 0.5s linear;
+  }
+  header .nav_items ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 20px;
+  }
+
+  header .nav_toggler {
+    display: flex;
+  }
+
+  header .nav_items.active {
+    left: 0;
+  }
+
+  .age_details_wrapper .top_content {
+    border-radius: 6px;
+    padding: 40px 20px;
+  }
+  .age_details_wrapper .top_content form {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .age_details_wrapper .top_content form input {
+    width: 100%;
+    border-radius: 100vmax;
+  }
+  .age_details_wrapper .top_content form button,
+  .age_details_wrapper .top_content form .resetBtn {
+    border-radius: 6px !important;
+  }
+  .age_details_wrapper .top_content form .btn_group {
+    width: 100%;
+  }
+}
